@@ -17,8 +17,7 @@ namespace SRP
  una especie de identificación del libro en el sistema.
 
  Agregamos un return para que el usuario pueda crear una instancia en libro en el sistema y devuelva
- la identidad del libro.
-  
+ la identidad del libro si este lo desea.
 */
         public BookCorrection(String title, String author, String code)
         {
@@ -26,24 +25,16 @@ namespace SRP
             this.Author = author;
             this.Code = code;
         }
-
-        public BookCorrection()
-        {
+/* Dentro de esta clase agregamos un método setShelve el cual recibe la colaboración de la clase ShelveCorrection. 
+Su responsabilidad es que para un libro dado por esta clase, se asigne una ubucación del libro.
+*/
+        public ShelveCorrection setShelve(ShelveCorrection shelve){
+            return shelve;
         }
 
         public override string ToString() 
         {
         return  $"Nombre {this.Title}\nAutor {this.Author}, \nCódigo: \n{this.Code} ";       
+        }   
         }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-    }
 }

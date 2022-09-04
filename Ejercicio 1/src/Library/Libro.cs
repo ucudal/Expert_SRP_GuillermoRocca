@@ -18,12 +18,12 @@ namespace SRP
  En esta clase se ejerce la responsabilidad de identificar un libro por su título, autor y código lo cual conforma
  una especie de identificación del libro en el sistema. A mi entender e interpretar pese a que la letra no aclara
  debe tener varios estados, no únicamente la ubicación. Por ejemplo un libro ingresado en el sistema puede estar alquilado,
- extraviado, fuera de circulación u  otras razones.
+ extraviado, fuera de circulación u  otras razones. Por otro lado también puede pasar que los libros vayan rotando
+ de ubicación y esta no sea fija.
 
  Por lo tanto de esta forma existirían mas de una razón para que la clase cambie, y la única razón por que la
  clase debería cambiar refiere a la identidad del libro en cuestión. Otorgada por el constructor. Esta clase 
- colaboraría con otra clase que si indicara sla ubicación en la biblioteca.
-  
+ colaboraría con otra clase que si debería asginar la ubicación del libro en la biblioteca. 
 */
         public Book(String title, String author, String code)
         {
@@ -39,6 +39,6 @@ la referencia del sector y estantería. Esa sería su responsabilidad.
             this.LibrarySector = sector;
             this.LibraryShelve = shelve;
         }
-
+        
     }
 }
